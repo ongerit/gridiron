@@ -173,7 +173,6 @@ body {
         height: 54.334vw;
         max-height: calc(10px* 54.334);
         max-width: 1000px;
-        margin: auto;
         transition: all .5s ease;
     }
     .sg-gridiron__draggable,
