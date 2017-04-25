@@ -1,0 +1,136 @@
+/* Challenger: Styles here */
+/*[BONUS]*/
+/*2. Use vh units to ensure the field is fully on screen on mobile.*/
+
+:root {
+    --grass-stain: #8AC24A;
+    --grass-stain-20: #16452d;;
+    --white: #FFF;
+    --mango: #FDD835;
+    --slate: #294661;
+}
+
+body {
+    margin-top: 0;
+}
+
+.sg-gridiron {
+    border: 10px solid var(--slate);
+    max-width: 100vh;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden; // [TO] aspect ratio
+    max-width: 100vh;
+    height: 54.334vw;
+    max-height: 54.334vh;
+}
+
+.sg-gridiron__draggable {
+    border: 3px solid var(--mango);
+    position: absolute;
+    width: 30px;
+    left: 3px;
+    z-index: 3;
+    max-width: 30px;
+    height: 30px;
+    background-color: var(--mango);
+    color: var(--white);
+    -ms-transform: translate(0px, 0px);
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+}
+
+.sg-gridiron__draggable p {
+    font-family: Arial, sans-serif;
+    color: var(--grass-stain);
+    margin: 0;
+    line-height: 30px;
+    text-align: center;
+    z-index: 3;
+}
+
+.sg-gridiron__draggable:after {
+    content: '';
+    height: 1000px;
+    width: 3px;
+    background-color: var(--mango);
+    position: absolute;
+    top: 30px;
+    left: 13px;
+}
+
+.sg-gridiron__draggable:before {
+    content: '';
+    height: 1000px;
+    width: 3px;
+    background-color: var(--mango);
+    position: absolute;
+    bottom: 30px;
+    left: 13px;
+}
+
+.sg-gridiron__field {
+    background: var(--grass-stain);
+    border: 3px solid var(--white);
+    height: 100%;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.sg-gridiron__field-spacer {
+    background: var(--grass-stain-20);
+    border-right: 1px solid var(--white);
+    width: 20%;
+}
+
+.sg-gridiron__field-element {
+    background: var(--grass-stain);
+    border-right: 1px solid var(--white);
+    width: 20%;
+    position: relative;
+}
+
+.sg-gridiron__field-element p {
+    color: var(--white);
+    font-family: Arial, sans-serif;
+    font-size: 25px;
+    bottom: 10%;
+    position: absolute;
+    left: 75%;
+    letter-spacing: 3px;
+    z-index: 2;
+}
+
+.sg-gridiron__field-element:nth-child(-n+5) p:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: -15%;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-right: 4px solid var(--white);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.sg-gridiron__field-element:nth-child(1n+7) p:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 50%;
+    right: -7px;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-right: 4px solid var(--white);
+    -ms-transform: translate(-50%, -50%) rotate(180deg);
+    -webkit-transform: translate(-50%, -50%) rotate(180deg);
+    transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.sg-gridiron__field-element:nth-child(11) p {
+    display: none;
+}

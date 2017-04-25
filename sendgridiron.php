@@ -91,6 +91,6 @@ function delete_post_type() {
 // [BONUS] 1. Use register_uninstall_hook() to
 // remove instances of the content type from the
 // database when the plugin is deleted.
-register_uninstall_hook(__FILE__, delete_post_type)
+register_uninstall_hook(__FILE__, delete_post_type);
 
 ?>
