@@ -1,4 +1,9 @@
 /* Challenger: Javascript here */
+
+// [TO] 7. Using javascript, implement a
+// means to drag or select the position
+// of the scrimmage line.
+
 // [TO] target elements with the "draggable" class
 interact('.sg-gridiron__draggable').draggable({
     // enable inertial throwing
@@ -28,12 +33,12 @@ interact('.sg-gridiron__draggable').draggable({
         var fieldValue = Math.round(elementDistance / fieldWidth * 100) - numberOfFieldElements;
         // [TO] offset because of
         // the 5px border
-        var calibrator = 4;
+        var calibrator = 3;
 
         // [TO] return no value
         // when yards on feild are
         // a negative number or over 100 yards.
-        if (fieldValue - calibrator < 0 || fieldValue > 104) {
+        if (fieldValue - calibrator < 0 || fieldValue > 103) {
             textEl.textContent = '';
             return;
         }

@@ -6,13 +6,8 @@
 </head>
 
 <body>
-
 <main class="archive">
-
-	<header><h1>Welcome Challenger</h1></header>
-
 	<!-- Challenger: PHP/Markup -->
-
   <section class="sg-gridiron">
     <!-- [TO] - Element to drag -->
     <div class="sg-gridiron__draggable">
@@ -58,12 +53,9 @@
       </div>
     </div>
   </section>
-
 </main>
 
 <!-- Challenger, use of jQuery libraries is optional -->
-<!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-<script src="http://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script> -->
 <script src="<?php print( plugin_dir_url( __FILE__ ).'js/interact.min.js')?>"></script>
 <script src="<?php print( plugin_dir_url( __FILE__ ).'js/challenge.js')?>"></script>
 
