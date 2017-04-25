@@ -47,6 +47,7 @@ body {
     line-height: 30px;
     text-align: center;
     z-index: 3;
+    font-size: 16px;
 }
 
 .sg-gridiron__draggable:after {
@@ -93,7 +94,7 @@ body {
 .sg-gridiron__field-element p {
     color: var(--white);
     font-family: Arial, sans-serif;
-    font-size: 25px;
+    font-size: 16px;
     bottom: 10%;
     position: absolute;
     left: 75%;
@@ -133,4 +134,15 @@ body {
 
 .sg-gridiron__field-element:nth-child(11) p {
     display: none;
+}
+
+@media screen and (min-width: 640px){
+
+  .sg-gridiron__draggable p{
+      font-size: 25px;
+  }
+
+  .sg-gridiron__field-element p {
+      font-size: 25px;
+  }
 }

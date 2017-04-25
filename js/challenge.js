@@ -23,9 +23,9 @@ interact('.sg-gridiron__draggable').draggable({
         var textEl = event.target.querySelector('p');
         var numberOfFieldElements = 10;
         // [TO] Width of the page
-        var fieldWidth = document.querySelector('.sg-gridiron__field-element').clientWidth * numberOfFieldElements;
+        var fieldWidth = document.querySelector('.sg-gridiron__field-element').offsetWidth * numberOfFieldElements;
         var elementDistance = event.clientX;
-        var fieldValue = Math.round(elementDistance / fieldWidth * 100) - 10;
+        var fieldValue = Math.round(elementDistance / fieldWidth * 100) - numberOfFieldElements;
         // [TO] offset because of
         // the 5px border
         var calibrator = 4;
