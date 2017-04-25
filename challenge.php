@@ -37,7 +37,7 @@
           $gridiron->the_post();
           ?>
             <div class="sg-gridiron__field-element">
-              <p data-content='<?php print( get_the_content() ) ?>'><?php printf( '%1$s', get_the_title());  ?></p>
+              <p data-content='<?php print( get_the_content() ) ?>'><?php print(preg_replace('/^0+/','', get_the_title())); ?><?php //printf( '%1$s', get_the_title());  ?></p>
             </div>
           <?php
         endwhile;
@@ -162,6 +162,32 @@
     letter-spacing: 3px;
     z-index: 2;
   }
+
+	.sg-gridiron__field-element:nth-child(-n+5) p:before {
+		content: '';
+		position: absolute;
+    width: 0;
+    height: 0;
+		top: 50%;
+    left: -15%;;
+		border-top: 3px solid transparent;
+		border-bottom: 3px solid transparent;
+		border-right: 4px solid var(--white);
+    transform: translate(-50%, -50%);
+	}
+/*
+	.sg-gridiron__field-element:nth-child(n+6) p:after {
+		content: '';
+		position: absolute;
+		width: 0;
+		height: 0;
+		top: 50%;
+		left: -7px;
+		border-top: 3px solid transparent;
+		border-bottom: 3px solid transparent;
+		border-right: 4px solid var(--white);
+		transform: translate(-50%, -50%);
+	}*/
 
 </style>
 
