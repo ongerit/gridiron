@@ -4,7 +4,7 @@
 
 :root {
     --grass-stain: #8AC24A;
-    --grass-stain-20: #16452d;;
+    --grass-stain-20: #16452d;
     --white: #FFF;
     --mango: #FDD835;
     --slate: #294661;
@@ -13,12 +13,11 @@
 body {
     margin-top: 0;
 }
- /*[TO] 5. Customize your markup and
+
+/*[TO] 5. Customize your markup and
  craft your CSS to style. */
+
 .sg-gridiron {
-    border: 10px solid var(--slate);
-    box-sizing: border-box;
-    overflow: hidden;
     border: 10px solid var(--slate);
     box-sizing: border-box;
     overflow: hidden;
@@ -26,12 +25,10 @@ body {
     max-height: 100vh;
     max-width: 1000px;
     transition: all .5s ease;
-
     /* [TO] 6. Using a media query, flip
     the field vertically at 640px
     viewport width. The mobile version
     need not have yard markers or a scrimmage line.*/
-
     transform: rotate(270deg);
     position: absolute;
     top: 21%;
@@ -151,57 +148,43 @@ body {
 .sg-gridiron__field-element:nth-child(11) p {
     display: none;
 }
+
 /* [TO] 6. Using a media query,
 // flip the field vertically at
 // 640px viewport width. The mobile
 // version need not have yard markers
 // or a scrimmage line.*/
 
-@media screen and (min-width: 640px){
-
+@media screen and (min-width: 640px) {
   /* [TO] 6. Using a media query, flip
   the field vertically at 640px
   viewport width. The mobile version
   need not have yard markers or a scrimmage line.*/
-
-  .sg-gridiron{
-    transform: rotate(0deg);
-    position: relative;
-    bottom: 0;
-    left: 0;
-    right: 0;
-
-    // [TO] aspect ratio
-    position: absolute;
-
-    width: 100vw;
-    height: 54.334vw;
-    max-height: calc(10px* 54.334);
-    max-width: 1000px;
-    margin: auto;
-    position: absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    transition: all .5s ease;
-  }
-
-  .sg-gridiron__draggable {
-    display: block;
-  }
-
-  .sg-gridiron__field-element p {
-    display: block;
-  }
+    .sg-gridiron {
+        position: absolute;
+        transform: rotate(0deg);
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        // [TO] aspect ratio
+        position: absolute;
+        width: 100vw;
+        height: 54.334vw;
+        max-height: calc(10px* 54.334);
+        max-width: 1000px;
+        margin: auto;
+        transition: all .5s ease;
+    }
+    .sg-gridiron__draggable,
+    .sg-gridiron__field-element p {
+        display: block;
+    }
 }
 
-@media screen and (min-width: 730px){
-  .sg-gridiron__draggable {
-      font-size: 36px;
-  }
-
-  .sg-gridiron__field-element p {
-      font-size: 36px;
-  }
+@media screen and (min-width: 730px) {
+    .sg-gridiron__draggable,
+    .sg-gridiron__field-element p {
+        font-size: 36px;
+    }
 }

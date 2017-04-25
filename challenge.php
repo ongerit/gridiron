@@ -1,5 +1,4 @@
 <html>
-
 <head>
 	<title>Gridiron Challenge</title>
   <link rel="stylesheet" href="<?php print( plugin_dir_url( __FILE__ ).'css/challenge.css')?>"/>
@@ -20,7 +19,7 @@
         $args = array(
           'post_type'   => 'gridiron',
           'post_status' => 'publish',
-          'order'=>'ASC'
+          'order'=> 'ASC'
          );
         $gridiron = new WP_Query( $args );
         if( $gridiron->have_posts() ) :
@@ -31,14 +30,14 @@
           ?>
             <div class="sg-gridiron__field-element">
               <p data-content='<?php print( get_the_content() ) ?>'>
-								<?php
+                <?php
                   // [BONUS] 3. Add the yard numbers.
                   $total_yards = 100;
                   $middle_of_field = 51;
-									$yards_on_field = preg_replace('/^0+/','', get_the_title());
+                  $yards_on_field = preg_replace('/^0+/','', get_the_title());
                   $yards_result = ($yards_on_field < $middle_of_field) ? print($yards_on_field) : print( $total_yards - $yards_on_field);
-									?>
-								</p>
+                ?>
+              </p>
             </div>
           <?php
         endwhile;
@@ -61,5 +60,4 @@
 
 </script>
 </body>
-
 </html>
